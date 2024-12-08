@@ -2,7 +2,17 @@
 
 A full-stack blogging platform where users can create, read, update, and delete blogs. This application consists of a **frontend** built with React and Tailwind CSS, and a **backend** built with Express.js and MongoDB.
 
----
+## Deployment
+
+### Frontend
+- Live Link: https://blog-agency-project-fuvi.vercel.app
+
+### Backend
+- Live Link: https://blog-agency-project.vercel.app
+
+### Admin Credentials
+- Username: Admin
+- Password: Admin@1234
 
 ## Features
 
@@ -50,7 +60,6 @@ A full-stack blogging platform where users can create, read, update, and delete 
    ```bash
    npm run dev
    ```
-
 ### Frontend Setup
 1. Navigate to the `frontend` folder:
    ```bash
@@ -66,87 +75,44 @@ A full-stack blogging platform where users can create, read, update, and delete 
    ```
 4. Open your browser and visit `http://localhost:5173`.
 
----
-
 ## API Endpoints
 
 ### Base URL
 `http://localhost:5000/api/v1`
 
-### Blog Routes
-- **Create Blog**: `POST /blogs/create`
+### Public Routes
+- **Admin Login**: `POST /login`
 - **Get All Blogs**: `GET /blogs`
-- **Get Single Blog**: `GET /blogs/:id`
-- **Update Blog**: `PUT /blogs/:id`
-- **Delete Blog**: `DELETE /blogs/:id`
+- **Get All Services**: `GET /services`
+- **Get All Members**: `GET /members/`
+- **Contact Mail Send**: `POST /contact-mail`
 
----
+### Admin Dashboard Route
+- **Dashboard**: `GET /admin`
 
-## Scripts
+### Admin Blog Routes
+- **Create Blog**: `POST /admin/blogs`
+- **Get All Blogs**: `GET /admin/blogs`
+- **Get Single Blog**: `GET /admin/blogs/:id`
+- **Update Blog**: `PUT /admin/blogs/:id`
+- **Delete Blog**: `DELETE /admin/blogs/:id`
 
-### Frontend
-| Command        | Description                   |
-|----------------|-------------------------------|
-| `npm run dev`  | Start the development server  |
-| `npm run build`| Build the project for production |
-| `npm run lint` | Run the linter                |
-| `npm run preview` | Preview the production build |
+### Admin Service Routes
+- **Create Service**: `POST /admin/services`
+- **Get All Services**: `GET /admin/services`
+- **Get Single Service**: `GET /admin/services/:id`
+- **Update Service**: `PUT /admin/services/:id`
+- **Delete Service**: `DELETE /admin/services/:id`
 
-### Backend
-| Command        | Description                   |
-|----------------|-------------------------------|
-| `npm run dev`  | Start the backend server with nodemon |
-
----
-
-## Deployment
-
-### Frontend
-- Hosted on [Vercel](https://www.vercel.com/).
-
-### Backend
-- Hosted on [Vercel](https://vercel.com/).
-
----
-
-## Project Structure
-
-### Frontend
-```
-frontend/
-├── public/
-├── src/
-│   ├── components/
-│   ├── pages/
-│   ├── styles/
-│   └── App.jsx
-└── package.json
-```
-
-### Backend
-```
-backend/
-├── src/
-│   ├── config/
-│   ├── controllers/
-│   ├── models/
-│   ├── routes/
-│   └── utils/
-├── index.js
-└── package.json
-```
-
----
-
-## Contributions
-Feel free to contribute to this project by submitting a pull request.
-
----
+### Admin Members Routes
+- **Create Member**: `POST /admin/members`
+- **Get All Members**: `GET /admin/members`
+- **Get Single Member**: `GET /admin/members/:id`
+- **Update Member**: `PUT /admin/members/:id`
+- **Delete Member**: `DELETE /admin/members/:id`
 
 ## License
 This project is licensed under the **MIT License**.
-
----
 
 ## Author
 **Md. Abu Younus**
